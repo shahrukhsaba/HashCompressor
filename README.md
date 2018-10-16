@@ -1,4 +1,5 @@
 #string-compressor
+
 UPDATED HASHING ALGORITHM (To get a unique 7 character length string) :
 1. Digest the input external id with SHA1 hash to generate 40 character hexadecimal output.
 2. Convert the String into character array.
@@ -16,11 +17,11 @@ E	112	6	672
 4. As above we will get an integer array of size 40 and now we reduce it down to 10 by summing adjacent 4 numbers.
 5. Say we get the below integer array of size 10 by summing logic.
 Position	1	2	3	4	5	6	7	8	9	10
-Sum	        786	546	875	645	256	768	763	453	886	985
+Sum	      786	546	875	645	256	768	763	453	886	985
 The total sum of above is : 6963
 6. Now since we need a string on 7 character length, we further reduce the above array in step 5 by trimming off all numbers after position 7 and replace 7th position by the total sum. As below:
 Position	1	2	3	4	5	6	7
-Sum	        786	546	875	645	256	768	6963
+Sum	      786	546	875	645	256	768	6963
 7. The last step is to map the sum with ALPHANUMERIC characters of desired choice. In our case the character set is :
 CHAR SET	POSITION
 0	0
